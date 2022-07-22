@@ -14,7 +14,7 @@ class TabsScreen extends StatefulWidget {
 }
 
 class _TabsScreenState extends State<TabsScreen> {
-     List<Map<String, Object>> pages=[];
+  List<Map<String, Object>> pages=[];
   int selectPageIndex = 0;
 
   void selectItem(int value) {
@@ -22,7 +22,7 @@ class _TabsScreenState extends State<TabsScreen> {
       selectPageIndex = value;
     });
   }
-@override
+  @override
   void initState() {
     pages = [
       {'page': const CategoryItem(), 'title': 'Category Meals'},
