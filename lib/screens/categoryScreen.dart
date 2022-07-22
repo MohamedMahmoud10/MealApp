@@ -8,19 +8,21 @@ class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: GridView(
-            padding: const EdgeInsets.all(10),
-            children: DUMMY_CATEGORIES
-                .map((catData) => CategoryItems(
-                    id: catData.id, title: catData.title, color: catData.color))
-                .toList(),
-            gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 200,
-              mainAxisSpacing: 20,
-              crossAxisSpacing: 20,
-              childAspectRatio: 3 / 2,
-            )),
-
+      body: GridView(
+          padding: const EdgeInsets.all(15),
+          children: DUMMY_CATEGORIES
+              .map((catData) => CategoryItems(
+                    id: catData.id,
+                    title: catData.title,
+                    color: catData.color,
+                    image: catData.image,
+                  ))
+              .toList(),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 20,
+            mainAxisSpacing: 20,
+          )),
     );
   }
 }

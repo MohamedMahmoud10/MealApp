@@ -10,11 +10,18 @@ class MainDrawer extends StatelessWidget {
       child:Column(
         children: [
              Container(
-               alignment: Alignment.center,
-              color: Colors.teal,
-              height: 100,
+               padding: EdgeInsets.all(10),
+               alignment: Alignment.centerLeft,
+              height: 200,
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
+                borderRadius: const  BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20)),
+
+              ),
               width: double.infinity,
-              child: const Text('Cooking UP!',style: TextStyle(color: Colors.white) ,),
+              child: const Text('Cooking UP!',style: TextStyle(color: Colors.black,fontSize: 30),),
           ),
           const SizedBox(height: 5,),
           buildListTile('Categor Meals',Icons.category,()=>Navigator.of(context).pushNamed('/')),
@@ -30,6 +37,10 @@ class MainDrawer extends StatelessWidget {
           leading: Icon(icon),
           title: Text(text),
           onTap: onTap,
+    trailing: const Icon(
+    Icons.arrow_right_rounded,
+    size: 35,)
+
         );
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../moduels/meal.dart';
 import '../widgets/Meal_widget.dart';
+
+
 class FavScreen extends StatelessWidget {
   List<Meal>favMeal=[];
   FavScreen(this.favMeal);
@@ -8,7 +10,7 @@ class FavScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if(favMeal.isEmpty){
-      return Center(
+      return const Center(
         child: Text('You have not favourite yet!!_Start adding some :)'),
       );
     }

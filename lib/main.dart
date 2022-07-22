@@ -59,8 +59,9 @@ class _MyAppState extends State<MyApp> {
       });
     }
   }
-  bool _isFavourite(String id ){
-   return _favMeal.any((meal) => meal.id==id);
+
+  bool _isFavourite(String id) {
+    return _favMeal.any((meal) => meal.id == id);
   }
 
   @override
@@ -68,7 +69,12 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.teal,
+        colorScheme: const ColorScheme.light(
+          primary: Color.fromRGBO(224, 168, 0, 1), //GoldenRod
+          secondary: Color.fromARGB(255, 231, 116, 132), //Terra Cotta
+        ),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 238, 240, 242),
+        canvasColor: const Color.fromARGB(255, 238, 240, 242),
         textTheme: ThemeData.light().textTheme.copyWith(
             bodyText1: const TextStyle(
               fontFamily: 'Raleway',
@@ -91,7 +97,8 @@ class _MyAppState extends State<MyApp> {
         '/': (context) => TabsScreen(_favMeal),
         CategoryMealScreen.routeName: (context) =>
             CategoryMealScreen(_avaliableMeals),
-        MealDetailScrenn.routeName: (context) =>  MealDetailScrenn(_toggleFav,_isFavourite),
+        MealDetailScrenn.routeName: (context) =>
+            MealDetailScrenn(_toggleFav, _isFavourite),
         FilterScreen.routeName: (context) =>
             FilterScreen(_filters, _setFilters),
       },

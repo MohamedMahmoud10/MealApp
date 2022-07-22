@@ -7,52 +7,68 @@ var DUMMY_CATEGORIES = [
     id: 'c1',
     title: 'Italian',
     color: Colors.purple,
+    image:
+        'https://uploads-ssl.webflow.com/5ce87e408cdd0a4373281d7b/6017fa780eb0741848b6af9a_cover.png',
   ),
   Category(
     id: 'c2',
     title: 'Quick & Easy',
     color: Colors.red,
+    image:
+        'https://dl.airtable.com/.attachmentThumbnails/5cd9c9749f9b4f9f58eecc127973966a/4f789b20',
   ),
   Category(
     id: 'c3',
     title: 'Hamburgers',
     color: Colors.orange,
+    image:
+    'https://www.hamburdehesa.com/wp-content/uploads/2017/10/background-hosteleriaburger.png',
   ),
   Category(
-    id: 'c4',
-    title: 'German',
-    color: Colors.amber,
-  ),
+      id: 'c4',
+      title: 'German',
+      color: Colors.amber,
+      image:
+      'https://th.bing.com/th/id/OIP.jrzxXQijKjos67d_iD8qCQHaLH?pid=ImgDet&rs=1'),
   Category(
-    id: 'c5',
-    title: 'Light & Lovely',
-    color: Colors.blue,
-  ),
+      id: 'c5',
+      title: 'Light & Lovely',
+      color: Colors.blue,
+      image:
+          'https://realfood.tesco.com/media/images/starter-8e10fd4c-1385-410b-bf6a-e2aa391b40ae-0-250x250.png'),
   Category(
     id: 'c6',
     title: 'Exotic',
     color: Colors.green,
+      image:'https://www.thefoodjournal.com.sg/wp-content/uploads/2016/08/koreandesserts-bingsu.jpg'
   ),
-  Category(
+ Category(
     id: 'c7',
     title: 'Breakfast',
     color: Colors.lightBlue,
+      image:
+      'https://www.jonesdairyfarm.com/App_Themes/JDF/Images/brinner/How%20Tos/How%20to%20Cook%20Eggs/soft_boiled.png'
   ),
   Category(
     id: 'c8',
     title: 'Asian',
     color: Colors.lightGreen,
+      image:
+      'https://simplyasia.co.za/wp-content/uploads/2021/06/550-dish-2.png'
   ),
   Category(
     id: 'c9',
     title: 'French',
     color: Colors.pink,
+      image:
+      'https://i.pinimg.com/originals/dd/04/28/dd04283f5413d2da68de4ac01d5558bd.png'
   ),
   Category(
-    id: 'c10',
-    title: 'Summer',
-    color: Colors.teal,
-  ),
+      id: 'c10',
+      title: 'Summer',
+      color: Colors.teal,
+      image:
+          'https://www.dillons.com/content/v2/binary/image/featured/summer-shop/summer_arugulapapayasalad--summer_arugulapapayasalad_330x330.png'),
 ];
 
 var DUMMY_MEALS = [

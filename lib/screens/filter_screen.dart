@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:meal_app_2/widgets/maindrawer.dart';
 
 class FilterScreen extends StatefulWidget {
-  Map<String,bool> cuurentFilter;
+  Map<String, bool> cuurentFilter;
   Function(Map<String, bool>) saveFilter;
 
-  FilterScreen(this.cuurentFilter,this.saveFilter);
+  FilterScreen(this.cuurentFilter, this.saveFilter);
+
   static const routeName = 'filterScreen';
 
   @override
@@ -17,20 +18,30 @@ class _FilterScreenState extends State<FilterScreen> {
   bool _vegan = false;
   bool _vegetarian = false;
   bool _lactoseFree = false;
-@override
+
+  @override
   void initState() {
-   _glutenFree = widget.cuurentFilter['glutenFree']!;
-   _vegan = widget.cuurentFilter['vegan']!;
-   _vegetarian = widget.cuurentFilter['vegetarian']!;
-   _lactoseFree = widget.cuurentFilter['lactoseFree']!;
+    _glutenFree = widget.cuurentFilter['glutenFree']!;
+    _vegan = widget.cuurentFilter['vegan']!;
+    _vegetarian = widget.cuurentFilter['vegetarian']!;
+    _lactoseFree = widget.cuurentFilter['lactoseFree']!;
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const MainDrawer(),
       appBar: AppBar(
-        title: const Text('Filters'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: const Text(
+          'Filters',
+          style: TextStyle(
+              color: Colors.black,
+              fontFamily: 'Raleway',
+              fontWeight: FontWeight.bold),
+        ),
         actions: [
           IconButton(
               onPressed: () {
@@ -42,13 +53,20 @@ class _FilterScreenState extends State<FilterScreen> {
                 };
                 widget.saveFilter(_selectedFilter);
               },
-              icon: const Icon(Icons.save))
+              icon: const Icon(Icons.save),color: Colors.black,)
         ],
+
       ),
       body: Column(children: [
         Container(
           padding: const EdgeInsets.all(20),
-          child: const Text('Adjust Your meal Section'),
+          child: const Text(
+            'Adjust Your meal Section',
+            style: TextStyle(
+                color: Colors.black,
+                fontFamily: 'Raleway',
+                fontWeight: FontWeight.bold),
+          ),
         ),
         Expanded(
             child: ListView(
